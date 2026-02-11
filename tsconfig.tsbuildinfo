@@ -1,0 +1,1 @@
+{"root":["./src/global.d.ts","./src/index.ts","./src/worldmap.ts","./src/state/gameactions.ts","./src/game.tsx","./src/state/gamestateprovider.tsx"],"version":"5.9.3"}
