@@ -29,7 +29,7 @@
   "dependencies": {
     "@plasius/error": "^1.0.0",
     "@plasius/react-state": "^1.2.0",
-    "@plasius/gpu-world-generator": "^0.0.0",
+    "@plasius/gpu-world-generator": "^0.0.4",
     "@plasius/gpu-xr": "^0.1.0"
   },
   "peerDependencies": {
