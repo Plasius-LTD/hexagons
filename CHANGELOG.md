@@ -20,6 +20,20 @@ The format is based on **[Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 - **Security**
   - (placeholder)
 
+## [1.0.4] - 2026-02-21
+
+- **Added**
+  - (placeholder)
+
+- **Changed**
+  - (placeholder)
+
+- **Fixed**
+  - (placeholder)
+
+- **Security**
+  - (placeholder)
+
 ## [1.0.3] - 2026-02-12
 
 - **Added**
@@ -48,7 +62,7 @@ The format is based on **[Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 
 ---
 
-[Unreleased]: https://github.com/Plasius-LTD/hexagons/compare/v1.0.3...HEAD
+[Unreleased]: https://github.com/Plasius-LTD/hexagons/compare/v1.0.4...HEAD
 
 ## [1.0.0] - 2026-02-11
 
@@ -64,3 +78,4 @@ The format is based on **[Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 - **Security**
   - (placeholder)
 [1.0.3]: https://github.com/Plasius-LTD/hexagons/releases/tag/v1.0.3
+[1.0.4]: https://github.com/Plasius-LTD/hexagons/releases/tag/v1.0.4
