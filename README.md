@@ -10,6 +10,8 @@
 
 Public package containing hexagonal architecture utilities and game/domain helpers for Plasius applications.
 
+Primary demo surface name: **Generator**.
+
 
 ## Install
 

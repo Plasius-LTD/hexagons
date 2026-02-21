@@ -1,4 +1,4 @@
-# @plasius/hexagons Demo
+# Generator Demo (`@plasius/hexagons`)
 
 This is a lightweight local demo scaffold for package sanity checks.
 
@@ -8,4 +8,3 @@ This is a lightweight local demo scaffold for package sanity checks.
 npm run build
 node demo/example.mjs
 ```
-

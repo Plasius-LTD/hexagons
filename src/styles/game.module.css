@@ -45,7 +45,9 @@
 .controls {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.65rem;
+  justify-content: flex-end;
 }
 
 .seed {
@@ -55,6 +57,27 @@
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 999px;
   padding: 0.3rem 0.7rem;
+}
+
+.modeButton {
+  border: 1px solid rgba(120, 201, 255, 0.44);
+  color: var(--text);
+  background: rgba(120, 201, 255, 0.16);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: transform 120ms ease, filter 120ms ease;
+}
+
+.modeButton:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+}
+
+.modeButton:active {
+  transform: translateY(0);
 }
 
 .button {
@@ -93,13 +116,55 @@
 }
 
 .mapCard {
+  position: relative;
   padding: 0.65rem;
 }
 
-.map {
+.viewport {
   display: block;
   width: 100%;
   height: min(72vh, 760px);
+  border-radius: 0.8rem;
+  background:
+    radial-gradient(90% 85% at 50% 100%, rgba(86, 118, 70, 0.35), transparent 70%),
+    linear-gradient(180deg, #0b1c2f, #112943 56%, #1b3428);
+  cursor: grab;
+  touch-action: none;
+}
+
+.viewport:active {
+  cursor: grabbing;
+}
+
+.viewport:focus-visible {
+  outline: 2px solid rgba(138, 214, 255, 0.8);
+  outline-offset: 2px;
+}
+
+.overlay {
+  position: absolute;
+  left: 1.2rem;
+  bottom: 1.15rem;
+  display: grid;
+  gap: 0.18rem;
+  max-width: min(88%, 32rem);
+  padding: 0.6rem 0.78rem;
+  border-radius: 0.65rem;
+  border: 1px solid rgba(185, 218, 255, 0.26);
+  background: rgba(3, 9, 17, 0.58);
+  backdrop-filter: blur(4px);
+}
+
+.overlayTitle {
+  font-size: 0.77rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #bde4ff;
+}
+
+.overlayText {
+  font-size: 0.78rem;
+  color: rgba(226, 239, 255, 0.92);
 }
 
 .tile {
@@ -173,6 +238,31 @@
   border: 1px solid rgba(120, 201, 255, 0.34);
 }
 
+.controlList {
+  margin: 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.35rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.controlList li {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.controlList kbd {
+  font-size: 0.73rem;
+  border-radius: 0.32rem;
+  border: 1px solid rgba(157, 179, 209, 0.4);
+  padding: 0.12rem 0.32rem;
+  color: #e7f0ff;
+  background: rgba(14, 24, 38, 0.72);
+}
+
 @keyframes reveal {
   from {
     opacity: 0;
@@ -202,7 +292,13 @@
     align-items: flex-start;
   }
 
-  .map {
+  .viewport {
     height: min(58vh, 540px);
+  }
+
+  .overlay {
+    left: 1rem;
+    right: 1rem;
+    max-width: none;
   }
 }

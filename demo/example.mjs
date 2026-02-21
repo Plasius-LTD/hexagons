@@ -10,6 +10,7 @@ if (!existsSync(distEntry)) {
 const mod = await import(distEntry.href);
 const exported = Object.keys(mod);
 
+console.log("Project:", "Generator");
 console.log("Package:", "@plasius/hexagons");
 console.log("Export count:", exported.length);
 console.log("Exports:", exported.slice(0, 20));
