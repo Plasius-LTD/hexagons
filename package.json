@@ -1,6 +1,6 @@
 {
   "name": "@plasius/hexagons",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "main": "./dist-cjs/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
