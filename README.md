@@ -31,6 +31,10 @@ When CJS output is emitted under `dist-cjs/*.js` with `type: module`, `dist-cjs/
 import { worldMap } from "@plasius/hexagons";
 ```
 
+The supported public API is the root module export from `src/index.ts`. Internal
+`src/state/*` files are implementation details unless they are explicitly
+re-exported.
+
 ## Development
 
 ```bash

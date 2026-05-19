@@ -17,6 +17,7 @@ The format is based on **[Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 - **Fixed**
   - Removed the deprecated direct `@types/uuid` dev dependency because `uuid` now ships its own type definitions.
   - (placeholder)
+  - Removed the empty `src/state/gameActions.ts` scaffold and added regression coverage so zero-byte TypeScript placeholders cannot slip back into the published source tree.
 
 - **Security**
   - (placeholder)
