@@ -12,6 +12,20 @@ The format is based on **[Keep a Changelog](https://keepachangelog.com/en/1.1.0/
   - (placeholder)
 
 - **Changed**
+  - (placeholder)
+
+- **Fixed**
+  - (placeholder)
+
+- **Security**
+  - (placeholder)
+
+## [1.0.20] - 2026-07-11
+
+- **Added**
+  - (placeholder)
+
+- **Changed**
   - Refreshed direct runtime and development dependencies to the latest stable published versions available for the repository's compatibility constraints.
   - Retained TypeScript 6.x because the latest `@typescript-eslint/parser` release requires TypeScript `<6.1.0`; TypeScript 7.x is not a reproducible clean-install baseline until that peer range is updated upstream.
 
@@ -206,7 +220,7 @@ The format is based on **[Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 
 ---
 
-[Unreleased]: https://github.com/Plasius-LTD/hexagons/compare/v1.0.19...HEAD
+[Unreleased]: https://github.com/Plasius-LTD/hexagons/compare/v1.0.20...HEAD
 
 ## [1.0.0] - 2026-02-11
 
@@ -233,3 +247,4 @@ The format is based on **[Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 [1.0.15]: https://github.com/Plasius-LTD/hexagons/releases/tag/v1.0.15
 [1.0.18]: https://github.com/Plasius-LTD/hexagons/releases/tag/v1.0.18
 [1.0.19]: https://github.com/Plasius-LTD/hexagons/releases/tag/v1.0.19
+[1.0.20]: https://github.com/Plasius-LTD/hexagons/releases/tag/v1.0.20
