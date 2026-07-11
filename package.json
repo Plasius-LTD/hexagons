@@ -30,10 +30,10 @@
   "author": "Plasius LTD <development@plasius.co.uk>",
   "license": "MIT",
   "dependencies": {
-    "@plasius/error": "^1.0.15",
-    "@plasius/gpu-world-generator": "^0.0.17",
-    "@plasius/gpu-xr": "^0.1.11",
-    "@plasius/react-state": "^1.2.12"
+    "@plasius/error": "^1.0.21",
+    "@plasius/gpu-world-generator": "^0.0.26",
+    "@plasius/gpu-xr": "^0.1.17",
+    "@plasius/react-state": "^1.2.17"
   },
   "peerDependencies": {
     "react": "^19"
@@ -41,20 +41,20 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@testing-library/react": "^16.3.2",
-    "@types/react": "^19.2.14",
-    "@typescript-eslint/eslint-plugin": "^8.59.3",
-    "@typescript-eslint/parser": "^8.59.3",
-    "@vitest/coverage-v8": "^4.1.6",
+    "@types/react": "^19.2.17",
+    "@typescript-eslint/eslint-plugin": "^8.63.0",
+    "@typescript-eslint/parser": "^8.63.0",
+    "@vitest/coverage-v8": "^4.1.10",
     "ajv": "^8.20.0",
-    "eslint": "^10.3.0",
-    "globals": "^17.6.0",
+    "eslint": "^10.7.0",
+    "globals": "^17.7.0",
     "npm-run-all": "^4.1.5",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6",
-    "react-router-dom": "^7.15.0",
-    "tsx": "^4.21.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^7.18.1",
+    "tsx": "^4.23.0",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.6",
+    "vitest": "^4.1.10",
     "zod": "^4.4.3"
   },
   "exports": {

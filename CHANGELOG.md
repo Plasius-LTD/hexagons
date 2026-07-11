@@ -12,7 +12,8 @@ The format is based on **[Keep a Changelog](https://keepachangelog.com/en/1.1.0/
   - (placeholder)
 
 - **Changed**
-  - (placeholder)
+  - Refreshed direct runtime and development dependencies to the latest stable published versions available for the repository's compatibility constraints.
+  - Retained TypeScript 6.x because the latest `@typescript-eslint/parser` release requires TypeScript `<6.1.0`; TypeScript 7.x is not a reproducible clean-install baseline until that peer range is updated upstream.
 
 - **Fixed**
   - (placeholder)
