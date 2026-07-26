@@ -30,7 +30,7 @@
   "author": "Plasius LTD <development@plasius.co.uk>",
   "license": "MIT",
   "dependencies": {
-    "@plasius/error": "^1.0.21",
+    "@plasius/error": "^1.0.22",
     "@plasius/gpu-world-generator": "^0.0.26",
     "@plasius/gpu-xr": "^0.1.17",
     "@plasius/react-state": "^1.2.17"
@@ -51,7 +51,6 @@
     "npm-run-all": "^4.1.5",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "react-router-dom": "^7.18.1",
     "tsx": "^4.23.0",
     "typescript": "^6.0.3",
     "vitest": "^4.1.10",
