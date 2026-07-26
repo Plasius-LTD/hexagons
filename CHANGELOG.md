@@ -18,6 +18,8 @@ The format is based on **[Keep a Changelog](https://keepachangelog.com/en/1.1.0/
   - (placeholder)
 
 - **Security**
+  - Added fail-closed source and npm-package admission for the administrative contributor registry and pinned the CI/CD runtime to Node.js 24.18.0 LTS.
+  - Updated the release dependency graph to surviving `@plasius/error@1.0.22` and `@plasius/gpu-shared@1.0.14`, and removed an unused vulnerable router development dependency.
   - (placeholder)
 
 ## [1.0.20] - 2026-07-11
