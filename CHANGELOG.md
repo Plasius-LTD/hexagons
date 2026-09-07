@@ -40,6 +40,7 @@ The format is based on **[Keep a Changelog](https://keepachangelog.com/en/1.1.0/
   - (placeholder)
 
 - **Security**
+  - Raised the `fast-uri` override to the patched 3.1.x line to clear the four high-severity host-confusion and SSRF advisories.
   - (placeholder)
 
 ## [1.0.19] - 2026-06-22
