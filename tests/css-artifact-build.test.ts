@@ -1,48 +1,60 @@
 import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
-import { afterEach, beforeEach, expect, it } from "vitest";
-import { copyCssAssets } from "../scripts/copy-css-assets.mjs";
+import { afterEach, beforeEach, expect, it, vi } from "vitest";
 
 const asset = "styles/game.module.css";
 const css = Buffer.from(".tile { display: grid; }\n");
-let root: string;
+const cli = vi.hoisted(() => ({ root: "", output: "" }));
+
+vi.mock("node:process", () => ({
+  get argv() {
+    return ["node", "copy-css-assets.mjs", cli.output];
+  },
+  cwd: () => cli.root,
+}));
+
+function runCopy(output: string) {
+  cli.output = output;
+  vi.resetModules();
+  return import("../scripts/copy-css-assets.mjs");
+}
 
 beforeEach(() => {
-  root = mkdtempSync(join(tmpdir(), "hexagons-css-"));
+  cli.root = mkdtempSync(join(tmpdir(), "hexagons-css-"));
 });
 
 afterEach(() => {
-  rmSync(root, { recursive: true, force: true });
+  rmSync(cli.root, { recursive: true, force: true });
 });
 
-it.each(["dist", "dist-cjs"])("copies the CSS bytes to %s", (output) => {
-  const source = join(root, "src", asset);
+it.each(["dist", "dist-cjs"])("copies the CSS bytes to %s", async (output) => {
+  const source = join(cli.root, "src", asset);
   mkdirSync(dirname(source), { recursive: true });
   writeFileSync(source, css);
 
-  copyCssAssets(root, output);
+  await runCopy(output);
 
-  expect(readFileSync(join(root, output, asset))).toEqual(css);
+  expect(readFileSync(join(cli.root, output, asset))).toEqual(css);
 });
 
-it.each(["dist", "dist-cjs"])("rejects missing source even when %s has a stale copy", (output) => {
-  const stale = join(root, output, asset);
+it.each(["dist", "dist-cjs"])("rejects missing source even when %s has a stale copy", async (output) => {
+  const stale = join(cli.root, output, asset);
   mkdirSync(dirname(stale), { recursive: true });
   writeFileSync(stale, css);
 
-  expect(() => copyCssAssets(root, output)).toThrow(/ENOENT/);
+  await expect(runCopy(output)).rejects.toThrow(/ENOENT/);
 });
 
-it.each(["dist", "dist-cjs"])("rejects a destination collision in %s", (output) => {
-  const source = join(root, "src", asset);
+it.each(["dist", "dist-cjs"])("rejects a destination collision in %s", async (output) => {
+  const source = join(cli.root, "src", asset);
   mkdirSync(dirname(source), { recursive: true });
   writeFileSync(source, css);
-  mkdirSync(join(root, output, asset), { recursive: true });
+  mkdirSync(join(cli.root, output, asset), { recursive: true });
 
-  expect(() => copyCssAssets(root, output)).toThrow();
+  await expect(runCopy(output)).rejects.toThrow(/EISDIR|EEXIST/);
 });
 
-it("rejects output outside the two package trees", () => {
-  expect(() => copyCssAssets(root, "../other")).toThrow(/Expected dist or dist-cjs output/);
+it("rejects output outside the two package trees", async () => {
+  await expect(runCopy("../other")).rejects.toThrow(/Expected dist or dist-cjs output/);
 });
