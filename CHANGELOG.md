@@ -8,6 +8,8 @@ The format is based on **[Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 
 ## [Unreleased]
 
+## [1.0.21] - 2026-11-17
+
 ### Fixed
 
 - Restore automatic schema-template npm publication and validate renewed trusted publishing with a sealed package inventory.
@@ -179,7 +181,7 @@ The format is based on **[Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 
 ---
 
-[Unreleased]: https://github.com/Plasius-LTD/hexagons/compare/v1.0.20...HEAD
+[Unreleased]: https://github.com/Plasius-LTD/hexagons/compare/v1.0.21...HEAD
 
 ## [1.0.0] - 2026-02-11
 
@@ -204,3 +206,4 @@ The format is based on **[Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 [1.0.18]: https://github.com/Plasius-LTD/hexagons/releases/tag/v1.0.18
 [1.0.19]: https://github.com/Plasius-LTD/hexagons/releases/tag/v1.0.19
 [1.0.20]: https://github.com/Plasius-LTD/hexagons/releases/tag/v1.0.20
+[1.0.21]: https://github.com/Plasius-LTD/hexagons/releases/tag/v1.0.21
