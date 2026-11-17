@@ -14,7 +14,6 @@ export default defineConfig({
         "dist/**",
         "dist-cjs/**",
         "coverage/**",
-        "scripts/**",
         "**/*.config.*",
         "eslint.config.js",
         "**/types/**",

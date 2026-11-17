@@ -45,6 +45,11 @@ test("sealed artifact accepts only the reviewed package inventory", () => {
   const accepted = run(EXPECTED_PACKED_PATHS);
   assert.equal(accepted.status, 0, accepted.stderr);
   assert.equal(run(EXPECTED_PACKED_PATHS.slice(1)).status, 1);
+  for (const css of ["dist/styles/game.module.css", "dist-cjs/styles/game.module.css"]) {
+    const missingCss = run(EXPECTED_PACKED_PATHS.filter((entry) => entry !== css));
+    assert.equal(missingCss.status, 1);
+    assert.match(missingCss.stderr, /1 missing, 0 unexpected/u);
+  }
   const rejected = run([...EXPECTED_PACKED_PATHS, "unexpected-SYNTHETIC-file.txt"]);
   assert.equal(rejected.status, 1);
   assert.doesNotMatch(rejected.stderr, /SYNTHETIC/u);

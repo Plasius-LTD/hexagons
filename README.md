@@ -81,3 +81,7 @@ tests the policy and release contract. `npm run pack:check` checks the package
 against the reviewed inventory in `scripts/package-artifacts.json`; update that
 inventory deliberately when public package files change. Add real notes under
 `Unreleased`; only the release pipeline promotes them to a versioned section.
+
+`npm run build` copies the required game CSS module into both ESM and CommonJS
+outputs using Node. A missing source or failed copy stops the build, and
+`npm run pack:check` requires both built copies in the package inventory.
