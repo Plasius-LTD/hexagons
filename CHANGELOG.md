@@ -8,6 +8,8 @@ The format is based on **[Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 
 ## [Unreleased]
 
+## [1.0.23] - 2026-11-22
+
 - Refresh supported npm dependencies and transitive security fixes across published tooling and runtime dependency locks.
 
 ## [1.0.22] - 2026-11-17
@@ -189,7 +191,7 @@ The format is based on **[Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 
 ---
 
-[Unreleased]: https://github.com/Plasius-LTD/hexagons/compare/v1.0.22...HEAD
+[Unreleased]: https://github.com/Plasius-LTD/hexagons/compare/v1.0.23...HEAD
 
 ## [1.0.0] - 2026-02-11
 
@@ -216,3 +218,4 @@ The format is based on **[Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 [1.0.20]: https://github.com/Plasius-LTD/hexagons/releases/tag/v1.0.20
 [1.0.21]: https://github.com/Plasius-LTD/hexagons/releases/tag/v1.0.21
 [1.0.22]: https://github.com/Plasius-LTD/hexagons/releases/tag/v1.0.22
+[1.0.23]: https://github.com/Plasius-LTD/hexagons/releases/tag/v1.0.23
