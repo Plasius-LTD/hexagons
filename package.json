@@ -32,10 +32,10 @@
   "author": "Plasius LTD <development@plasius.co.uk>",
   "license": "MIT",
   "dependencies": {
-    "@plasius/error": "^1.0.22",
-    "@plasius/gpu-world-generator": "^0.1.0",
-    "@plasius/gpu-xr": "^0.1.17",
-    "@plasius/react-state": "^1.2.17"
+    "@plasius/error": "^1.0.27",
+    "@plasius/gpu-world-generator": "^0.1.1",
+    "@plasius/gpu-xr": "^0.1.18",
+    "@plasius/react-state": "^1.2.23"
   },
   "peerDependencies": {
     "react": "^19"
@@ -43,20 +43,21 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@testing-library/react": "^16.3.3",
-    "@types/react": "^19.2.18",
-    "@typescript-eslint/eslint-plugin": "^8.69.0",
-    "@typescript-eslint/parser": "^8.69.0",
-    "@vitest/coverage-v8": "^4.1.11",
+    "@types/react": "^19.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.73.0",
+    "@typescript-eslint/parser": "^8.73.0",
+    "@vitest/coverage-v8": "^5.1.1",
     "ajv": "^8.20.0",
-    "eslint": "^10.9.1",
-    "globals": "^17.11.0",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0",
     "npm-run-all": "^4.1.5",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
-    "tsx": "^4.23.13",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tsx": "^4.23.15",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.11",
-    "zod": "^4.5.4"
+    "vitest": "^5.1.1",
+    "zod": "^4.6.7",
+    "vite": "^8.3.8"
   },
   "exports": {
     ".": {
@@ -107,9 +108,9 @@
     "node": ">=24"
   },
   "overrides": {
-    "brace-expansion": "5.0.9",
+    "brace-expansion": "5.0.12",
     "nanoid": "3.3.18",
     "fast-uri": "^3.1.6",
-    "minimatch": "^10.2.1"
+    "minimatch": "^11.0.9"
   }
 }

@@ -8,6 +8,8 @@ The format is based on **[Keep a Changelog](https://keepachangelog.com/en/1.1.0/
 
 ## [Unreleased]
 
+- Refresh supported npm dependencies and transitive security fixes across published tooling and runtime dependency locks.
+
 ## [1.0.22] - 2026-11-17
 
 ### Fixed
